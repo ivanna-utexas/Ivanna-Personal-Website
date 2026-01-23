@@ -1,0 +1,200 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    padding-top: 90px;
+    padding-left: 5%;
+    padding-bottom: 70px;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+}
+
+.desktop {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    /* gap: 10%; */
+}
+
+.app {
+    width: 70px;
+    height: auto;
+}
+
+.folderIcon {
+    width: 110px;
+    height: auto;
+    margin-left: -15%;
+}
+
+.leftApps {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+    gap: 40px
+}
+
+.rightApps {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 15%;
+}
+
+
+.Terminals {
+    position: relative;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    margin-right: 15%;
+    /* margin-left: 15%; */
+    /* transform-origin: center; */
+}
+
+.MainTerminal {
+    position: absolute;
+    top: -130px;
+    left: 50px;
+    
+}
+
+.insideTermial {
+    display: flex;
+    flex-direction: row;
+    margin-top: -200px;
+    gap: 20px
+}
+
+.mainStyle {
+    z-index: 1;
+}
+
+.textStack {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    gap: 20px;
+}
+
+.MainTerminal p {
+    color: #FFF;
+    font-family: "Abril Fatface";
+    font-size: 20px;
+    z-index: 5;
+}
+
+.MainTerminal h1 {
+    color: #FFF;
+    font-family: "BlackHanSans";
+    font-size: 40px;
+    z-index: 5;
+}
+
+
+.Back {
+    position: absolute;
+
+}
+
+.heroPFP {
+    width: 187px;
+    clip-path: circle();
+    border-radius: 187px;
+    background: url(<path-to-image>) lightgray -41.866px -63.983px / 155.09% 214.493% no-repeat;
+    mix-blend-mode: luminosity;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+
+@media screen and (max-width: 1300px){
+
+    .container {
+        padding-top: 90px;
+        /* padding-left: 5%; */
+        padding-bottom: 20px;
+    }
+
+    .content {
+        flex: none;
+    }
+
+    .desktop {
+        display: flex;
+    }
+    
+
+    .Terminals {
+        flex: none;
+        display: flex;
+        /* justify-content: center; */
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .Terminals {
+        flex: none;
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Terminals {
+        margin-left: 3%;
+    }
+
+    .terminalsInner {
+        transform: scale(0.9);
+        margin-left: 0%;
+        /* margin-right: 5%; */
+    }
+}
+
+
+@media (max-width: 900px) {
+    .terminalsInner {
+        transform: scale(0.8);
+        margin-right: 15%;
+    }
+}
+
+@media (max-width: 700px) {
+    .Terminals {
+        margin-left: 0%;
+    }
+
+    .terminalsInner {
+        transform: scale(0.7);
+        margin-right: 23%;
+    }
+}
+
+@media (max-width: 600px) {
+    .Terminals {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .terminalsInner {
+        transform: scale(0.5);
+        margin-right: 40%;
+    }
+}

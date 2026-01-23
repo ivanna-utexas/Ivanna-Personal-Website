@@ -1,0 +1,34 @@
+@import "./vars.css";
+
+@font-face {
+    font-family: "BlackHanSans";
+    src: url("../public/BlackHanSans-Regular.ttf");
+}
+
+.BlackHanSans {
+    font-family: BlackHanSans;
+}
+
+@font-face {
+    font-family: "AbrilFatFace";
+    src: url("../public/AbrilFatface-Regular.ttf");
+}
+
+.abrilFatFace {
+    font-family: AbrilFatFace;
+}
+
+.App {
+    background-color: var(--charcoal-Black);
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    display: inline-block;
+    transition: 0.5s ease;
+}
+
+a:hover {
+    transform: scale(1.08);
+}

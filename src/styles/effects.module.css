@@ -1,0 +1,25 @@
+@import "../vars.css";
+
+.shineText {
+  position: relative;
+  background: linear-gradient(
+    120deg,
+    var(--ivanna-purple) 0%,
+    var(--ivanna-purple) 40%,
+    #eeceff 50%,
+    var(--ivanna-purple)60%,
+    var(--ivanna-purple) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0.20em 0;
+  animation: shine 3s linear infinite;
+}
+
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

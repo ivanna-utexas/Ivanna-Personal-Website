@@ -1,0 +1,174 @@
+@import "../../vars.css";
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    min-height: 100vh;
+}
+
+.arrow {
+    margin-bottom: 30px;
+}
+
+.timeLine {
+    height: 85%;
+    max-height: 1250px; 
+    width: auto;
+    display: block;
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+}
+
+.title {
+    color: var(--Ivanna-Purple, #9784B6);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "BlackHanSans";
+    font-size: 96px;
+    align-items: start;
+    
+
+}
+
+.title img {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.experienceList {
+    display: flex;
+    flex-direction: column;
+}
+
+.experienceItem {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+    /* flex-wrap: wrap; */
+}
+
+.experienceCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: var(--deep-mauve);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 24px;
+    min-width: 45%;
+    align-items: start;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.companyLogo {
+    width: 30px;
+    height: auto;
+}
+
+.role {
+    color: #fcfcfc;
+    font-family: "AbrilFatface";
+    font-size: 24px;
+    text-decoration: underline;
+    text-decoration-color: var(--ash-lavender);
+}
+
+.bullets li{
+    color: var(--Ash-Lavender, #A49CA7);
+    font-family: "AbrilFatface";
+    font-size: 16px;
+}
+
+.meta {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 24px;
+    /* flex-wrap: wrap; */
+}
+
+.metaItem {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* padding-left: 10%; */
+}
+
+.metaItem img {
+    width: 20px;
+    height: auto;
+}
+
+.metaItem span {
+    color: var(--charcoal-Black);
+    font-family: "AbrilFatface";
+    font-size: 16px;
+    margin-left: 5%;
+}
+
+
+.paragraphSkills {
+    padding-left: 5%;
+}
+
+
+.paragraphSkills p {
+    color: var(--Ash-Lavender);
+    font-family: "AbrilFatface";
+    font-size: 16px;
+    letter-spacing: 0.48px;
+}
+
+.paragraphSkills ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    row-gap: 15px;
+    padding: 10px;
+}
+
+
+.skills li {
+    color: #FFF;
+    text-align: center;
+    font-family: "Abril Fatface";
+    font-size: 16px;
+    letter-spacing: 0.48px;
+    vertical-align: center;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid var(--Ivanna-Purple, #9784B6);
+    background: rgba(151, 132, 182, 0.46);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    max-height: fit-content;
+}
+
+
+@media screen and (max-width: 830px){
+
+    .timeLine {
+        display: none;
+    }
+    .title {
+        font-size: 46px;
+    }
+
+    .experienceItem {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paragraphSkills {
+        padding-top: 5%;
+    }
+}

@@ -1,0 +1,149 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    background-color: var(--deep-mauve);
+    padding: 45px;
+    /* margin-top: -116px; */
+}
+
+.container h1 {
+    color: #FFF;
+    font-family: "Abril Fatface";
+    letter-spacing: 3px;
+    font-size: 36px;
+}
+
+.container p {
+    color: var(--charcoal-Black);
+    font-family: "Abril Fatface";
+    font-size: 24px;
+    line-height: 35px; /* 145.833% */
+    letter-spacing: 0.72px;
+}
+
+.title {
+    color: var(--Ivanna-Purple, #9784B6);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    font-family: "BlackHanSans";
+    font-size: 96px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.countriesOutline {
+    width: 500px;
+    height: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.aboutPicture {
+    display: flex;
+    width: 300px;
+    height: 424px;
+    mix-blend-mode: luminosity;
+}
+
+.utlogo {
+    width: 100px;
+    height: 100px;
+    transform: rotate(-7.538deg) translateY(-30px);
+}
+
+.rowContent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px
+}
+
+.rowContentBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px
+}
+
+.countriesOutline {
+    display: flex;
+}
+
+.colContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.otherItemsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+
+
+
+.aboutItems {
+    color: var(--charcoal-Black);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+
+.aboutItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--charcoal-Black);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+
+.aboutItemText {
+    padding-left: 5%;
+}
+
+
+.aboutItem h1 {
+    color: var(--Ash-Lavender, #A49CA7);
+    font-family: "BlackHanSans";
+    font-size: 24px;
+}
+
+
+.aboutItem p {
+    color: #FFF;
+    font-family: "AbrilFatface";
+    font-size: 24px;
+
+
+}
+
+
+
+@media screen and (max-width: 830px){
+    .content {
+        flex-direction: column;
+    }
+    .countriesOutline {
+        display: none;
+    }
+
+    .rowContentBottom {
+        flex-direction: column;
+    }
+
+    .aboutPicture {
+        display: none;
+    }
+}

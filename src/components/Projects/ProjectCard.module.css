@@ -1,0 +1,102 @@
+@import "../../vars.css";
+
+
+
+.card {
+    background: var(--charcoal-Black);
+    position: relative;
+    min-width: 550px;
+    background: var(--Charcoal-Black, #2B2B2B);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.title {
+    color: #9784B6;
+    text-align: center;
+    font-family: "AbrilFatface";
+    font-size: 30px;
+    background: var(--Deep-Mauve, #5D536B);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    justify-content: center;
+}
+
+.card p {
+    color: var(--Deep-Mauve, #5D536B);
+    font-family: "AbrilFatface";
+    font-size: 16px;
+
+}
+
+.content {
+    position: relative;
+    display: flex;
+    gap: 17px;
+    flex-direction: column;
+    padding: 3%;
+    align-items: center;
+}
+
+.open {
+    cursor: none;
+}
+
+.arrow{
+    align-self: flex-end;
+    z-index: 1;
+    padding: none;
+    cursor: pointer;
+}
+
+.arrow,
+img,
+h3,
+p {
+    position: relative;
+    z-index: 1;
+}
+
+.topCircle {
+    position: absolute;
+    background-color: rgba(93, 83, 107, 0.50);
+    border-bottom-right-radius: 100%;
+    width: 150px;
+    height: 150px;
+    transform: rotate(90.052deg);
+    z-index: 0;
+    top: 0;
+    right: 0;
+}
+
+.content img{
+    z-index: 1;
+    width: 472px;
+    height: auto;
+    border: 3px solid var(--Ash-Lavender, #A49CA7);
+    background: url(<path-to-image>) lightgray 0.416px -23.283px / 100% 115.348% no-repeat;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.technology {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.tech {
+    color: #FFF;
+    text-align: center;
+    font-family: "Abril Fatface";
+    font-size: 16px;
+    letter-spacing: 0.48px;
+    vertical-align: center;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid var(--Ivanna-Purple, #9784B6);
+    background: rgba(151, 132, 182, 0.46);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    max-height: fit-content;
+}
+

@@ -1,0 +1,36 @@
+@import "../../vars.css";
+
+.container {
+    margin-top: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.container h3 {
+    color: #FFF;
+    font-family: Sagfield;
+    font-size: 24px;
+}
+
+.logos {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.logos img {
+    flex-direction: row;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+}
