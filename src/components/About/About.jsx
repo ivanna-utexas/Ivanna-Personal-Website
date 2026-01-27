@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./About.module.css";
-
+import effects from "../../styles/effects.module.css";
 import aboutPicture from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/aboutPicture.JPG";
 import backendIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/Backend.png";
 import bakingIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/baking.png";
@@ -11,40 +11,80 @@ import robotIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Iv
 import runIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/running.png";
 import UTLogo from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/UTLogo.png";
 import countries from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/countries.svg";
+import { useState, useEffect } from "react";
 
 export const About = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    document
+      .querySelectorAll(`.${styles.slideIn}`)
+      .forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(effects.visible); // Use effects module
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    document
+      .querySelectorAll(`.${effects.popup}`)
+      .forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className={styles.container} id="about">
-      <h2 className={styles.title}>ABOUT ME</h2>
+      <h2 className={`${styles.title} ${styles.slideIn}`}>ABOUT ME</h2>
       <div className={styles.colContent}>
         <div className={styles.rowContent}>
           <img
-            className={styles.aboutPicture}
+            className={`${styles.aboutPicture} ${effects.floating}`}
             src={aboutPicture}
             alt="A Picture of Me!"
           />
           <div className={styles.colContent}>
             <div className={styles.rowContent}>
               <img
-                className={styles.utlogo}
+                className={`${styles.utlogo} ${effects.wiggle}`}
                 src={UTLogo}
                 alt="UT Austin Logo"
               />
               <h1>“What starts here changes the world!”</h1>
             </div>
             <p>
-              I’m a computer science student at the University of Texas at
-              Austin pursuing a B.S. in Computer Science and a Robotics minor
-              through the Robotics Honors Program. I’m interested in building
-              real-world robotic systems and full-stack software. My experience
-              includes research in the UT Dallas StaRLiNG Machine Learning Lab
-              and full-stack development using JavaFX and React. This spring, I
-              will be participating in UT Austin’s Autonomous Driving Research
-              Lab, where I’ll work on core autonomy challenges such as
-              multi-sensor fusion using camera, LiDAR, and IMU data, as well as
-              perception, planning, and control for autonomous vehicles. I’m
-              currently looking for experiences that combine hands-on
-              experimentation with real-world applications!
+              I'm a computer science student at the University of Texas at
+              Austin pursuing a B.S. in Computer Science with a minor in
+              Robotics through the Robotics Honors Program. I'm passionate about
+              machine learning, autonomous systems, and building impactful
+              software solutions. My experience includes developing
+              anomaly-based machine learning models for cybersecurity at UT
+              Dallas' StaRLiNG Lab and creating educational software tools.
+              Currently, I'm conducting research at UT Austin's Freshman
+              Research Initiative, working on autonomous vehicle systems with a
+              focus on multi-sensor fusion using camera, LiDAR, and IMU data, as
+              well as perception, planning, and control algorithms. I'm actively
+              seeking internship opportunities where I can apply my technical
+              skills to solve real-world problems and contribute to innovative
+              projects.
             </p>
           </div>
         </div>
@@ -52,11 +92,11 @@ export const About = () => {
           <div className={styles.otherItemsRow}>
             <div className={styles.colContent}>
               <img
-                className={styles.countriesOutline}
+                className={`${styles.countriesOutline} ${effects.popup}`}
                 src={countries}
                 alt="Countries im from!"
               />
-              <p>
+              <p className={effects.wiggle}>
                 Outside of computer science I play flute in the UT Symphony
                 Band, I am a member of the Latina Run Club, and I love baking!
               </p>
@@ -64,7 +104,7 @@ export const About = () => {
           </div>
 
           <ul className={styles.aboutItems}>
-            <li className={styles.aboutItem}>
+            <li className={`${styles.aboutItem} ${styles.slideIn}`}>
               <svg
                 className={styles.robot}
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,12 +160,14 @@ export const About = () => {
               <div className={styles.aboutItemText}>
                 <h1>Research</h1>
                 <p>
-                  I have Experience with Personal and Professional Research with
-                  a focus on Robotics.
+                  I have experience in machine learning and autonomous systems
+                  research, from developing ML-based detection systems for
+                  cybersecurity and building perception and control algorithms
+                  for autonomous vehicles.
                 </p>
               </div>
             </li>
-            <li className={styles.aboutItem}>
+            <li className={`${styles.aboutItem} ${styles.slideIn}`}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="72"
@@ -180,12 +222,14 @@ export const About = () => {
               <div className={styles.aboutItemText}>
                 <h1>Frontend Developer</h1>
                 <p>
-                  I’m a front-end developer with experience in building
-                  responsive and optimized sites
+                  I can build responsive, interfaces for both web and desktop
+                  platforms. My web development experience includes JavaScript,
+                  HTML, and CSS for creating dynamic interface. On the desktop
+                  side, I've developed complex Java Swing applications.
                 </p>
               </div>
             </li>
-            <li className={styles.aboutItem}>
+            <li className={`${styles.aboutItem} ${styles.slideIn}`}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="60"
@@ -240,8 +284,11 @@ export const About = () => {
               <div className={styles.aboutItemText}>
                 <h1>Backend Developer</h1>
                 <p>
-                  I have experience developing fast and optimized back-end
-                  systems and APIs
+                  I build efficient backend systems through Java, Python, and C.
+                  My experience includes developing machine learning pipelines
+                  for cybersecurity applications, implementing custom program
+                  interpreters with runtime execution, and designing modular
+                  command systems.
                 </p>
               </div>
             </li>

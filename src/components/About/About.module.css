@@ -1,9 +1,46 @@
 @import "../../vars.css";
 
+
+.slideIn {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slideIn.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.popup {
+  opacity: 0;
+  transform: scale(0);
+  /* Don't animate by default - wait for scroll */
+}
+
+.popup.visible {
+  animation: popIn 0.5s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .container {
     position: relative;
     background-color: var(--deep-mauve);
-    padding: 45px;
+    padding: 35px;
     /* margin-top: -116px; */
 }
 
@@ -48,7 +85,7 @@
 .utlogo {
     width: 100px;
     height: 100px;
-    transform: rotate(-7.538deg) translateY(-30px);
+    /* transform: rotate(-7.538deg) translateY(-30px); */
 }
 
 .rowContent {
@@ -124,8 +161,8 @@
 .aboutItem p {
     color: #FFF;
     font-family: "AbrilFatface";
-    font-size: 24px;
-
+    font-size: 20px;
+    line-height: 25px;
 
 }
 

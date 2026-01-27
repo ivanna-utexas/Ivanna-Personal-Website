@@ -24,6 +24,6 @@
         "date": "JAN-PRESENT",
         "location": "Austin, TX",
         "paragraph": "I’m currently conducting research in UT Austin’s Autonomous Driving Lab, developing multi-sensor perception and decision-making algorithms for scaled autonomous vehicles. By the end of the semester I will have built 1/10th and 1/5th scale autonomous vehicles.",
-        "skills": ["Multi-sensor fusion", "LiDAR", "IMU data", "Scaled Robotics", "Computer Vision"]
+        "skills": ["Linux", "Python", "Multi-sensor fusion", "LiDAR", "IMU data", "Foxglove", "Scaled Robotics", "Computer Vision"]
     }
 ]

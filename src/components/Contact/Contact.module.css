@@ -1,7 +1,7 @@
 @import "../../vars.css";
 
 .container {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 3%;
     margin-right: 3%;
     display: flex;
@@ -34,3 +34,4 @@
 .logos img:hover {
     transform: scale(1.1);
 }
+

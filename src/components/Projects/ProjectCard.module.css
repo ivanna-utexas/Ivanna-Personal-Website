@@ -69,7 +69,7 @@ p {
 
 .content img{
     z-index: 1;
-    width: 472px;
+    width: 70%;
     height: auto;
     border: 3px solid var(--Ash-Lavender, #A49CA7);
     background: url(<path-to-image>) lightgray 0.416px -23.283px / 100% 115.348% no-repeat;

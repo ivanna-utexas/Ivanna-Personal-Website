@@ -1,20 +1,19 @@
 @import "../vars.css";
 
-.shineText {
+.shineText:hover{
   position: relative;
   background: linear-gradient(
     120deg,
-    var(--ivanna-purple) 0%,
-    var(--ivanna-purple) 40%,
-    #eeceff 50%,
-    var(--ivanna-purple)60%,
-    var(--ivanna-purple) 100%
+    var(--Ivanna-Purple, #9784B6) 0%,
+    var(--Ivanna-Purple, #9784B6)  40%,
+    #d1c1da 50%,
+    var(--Ivanna-Purple, #9784B6)  60%,
+    var(--Ivanna-Purple, #9784B6)  100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0.20em 0;
-  animation: shine 3s linear infinite;
+  animation: shine 3s linear;
 }
 
 
@@ -22,4 +21,145 @@
   to {
     background-position: 200% center;
   }
+}
+
+.typingText {
+  overflow: hidden;
+  border-right: 3px solid;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(40) forwards, blink 0.75s step-end infinite;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.fading {
+  animation: fade 1.5s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
+
+.slideFromLeft {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideFromRight {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideRight 0.6s ease-out forwards;
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideFromTop {
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: slideTop 0.6s ease-out forwards;
+}
+
+@keyframes slideTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideFromBottom {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideBottom 0.6s ease-out forwards;
+}
+
+@keyframes slideBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wiggle:hover {
+  animation: wiggle 0.6s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.popup {
+  opacity: 0;
+  transform: scale(0);
+  /* Don't animate by default - wait for scroll */
+}
+
+.popup.visible {
+  animation: popIn 0.5s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pop {
+    display: inline-block;
+    transition: 0.5s ease;
+}
+
+.pop:hover {
+    transform: scale(1.08);
 }

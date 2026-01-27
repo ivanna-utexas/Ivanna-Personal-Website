@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Experience.module.css";
+import effects from "../../styles/effects.module.css";
 
 import AutoDriving from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/AutoDrivingLogo.svg";
 import Calendar from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/Calendar.svg";
@@ -7,9 +8,46 @@ import Google from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivann
 import Location from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/Location.svg";
 import Research from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/ResearchLogo.svg";
 
+import { useState, useEffect } from "react";
 import experience from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/data/experience.json";
 
 export const Experience = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    document
+      .querySelectorAll(`.${styles.slideInLeft}`)
+      .forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    document
+      .querySelectorAll(`.${styles.slideInRight}`)
+      .forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const logos = {
     google: {
       src: Google,
@@ -27,7 +65,7 @@ export const Experience = () => {
 
   return (
     <section className={styles.container} id="experience">
-      <h2 className={styles.title}>EXPERIENCE</h2>
+      <h2 className={`${styles.title} ${styles.slideInLeft}`}>EXPERIENCE</h2>
 
       <svg
         className={styles.arrow}
@@ -101,7 +139,7 @@ export const Experience = () => {
 
           return (
             <li key={id} className={styles.experienceItem}>
-              <div className={styles.experienceCard}>
+              <div className={`${styles.experienceCard} ${styles.slideInLeft}`}>
                 <div className={styles.title}>
                   {logo && (
                     <img
@@ -112,7 +150,7 @@ export const Experience = () => {
                   )}
                   <h3 className={styles.role}>{item.role}</h3>
                 </div>
-                <div className={styles.content}>
+                <div className={`${styles.content}`}>
                   <ul className={styles.bullets}>
                     {item.information.map((info, i) => (
                       <li key={i}>{info}</li>
@@ -132,11 +170,15 @@ export const Experience = () => {
                   </div>
                 </div>
               </div>
-              <div className={styles.paragraphSkills}>
+              <div
+                className={`${styles.paragraphSkills} ${styles.slideInRight}`}
+              >
                 <p>{item.paragraph}</p>
                 <ul className={styles.skills}>
                   {item.skills.map((skill, i) => (
-                    <li key={i}>{skill}</li>
+                    <li className={effects.pop} key={i}>
+                      {skill}
+                    </li>
                   ))}
                 </ul>
               </div>

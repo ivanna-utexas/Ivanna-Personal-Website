@@ -4,6 +4,8 @@ import styles from "./NavBar.module.css";
 import HanburgerMenu from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/nav/HamburgerMenu.png";
 import XMenu from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/nav/XMenu.png";
 
+import resume from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/public/Ivanna Aleman-Coronado Resume.pdf";
+
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,6 +22,52 @@ export const NavBar = () => {
     setActiveIndex(map[hash] ?? 0);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        { id: "", index: 0 },
+        { id: "about", index: 1 },
+        { id: "experience", index: 2 },
+        { id: "projects", index: 3 },
+        { id: "contact", index: 4 },
+      ];
+
+      // Check if we're at the bottom of the page
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = document.documentElement.scrollTop;
+      const clientHeight = document.documentElement.clientHeight;
+
+      // If we're within 50px of the bottom, activate the last section
+      if (scrollHeight - scrollTop - clientHeight < 50) {
+        setActiveIndex(4); // Contact section
+        return;
+      }
+
+      // Find which section is currently in view
+      let currentIndex = 0;
+
+      for (const section of sections) {
+        if (!section.id) continue;
+
+        const element = document.getElementById(section.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Check if section is in the top portion of viewport
+          if (rect.top <= 150) {
+            currentIndex = section.index;
+          }
+        }
+      }
+
+      setActiveIndex(currentIndex);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once on mount to set initial state
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const indicatorPositions = [
     { left: -10, width: 97 },
     { left: 115, width: 100 },
@@ -30,7 +78,11 @@ export const NavBar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="/">
+      <a
+        className={styles.title}
+        href="/Ivanna Aleman-Coronado Resume.pdf"
+        download={resume}
+      >
         RESUME
       </a>
       <div className={styles.menu}>

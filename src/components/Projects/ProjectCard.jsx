@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./ProjectCard.module.css";
+import effects from "../../styles/effects.module.css";
 import ProjectModel from "./ProjectModel";
 
 export default function ProjectCard({ project }) {
@@ -28,7 +29,7 @@ export default function ProjectCard({ project }) {
           <p>{project.Description}</p>
           <ul className={styles.technology}>
             {project.Technology.map((tech, i) => (
-              <li className={styles.tech} key={i}>
+              <li className={`${styles.tech} ${effects.pop}`} key={i}>
                 {tech}
               </li>
             ))}

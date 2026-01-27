@@ -1,5 +1,19 @@
 @import "../../vars.css";
 
+.typingText {
+  word-wrap: break-word;
+  
+}
+
+.cursor {
+    color: #FFF;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 .container {
     position: relative;
     padding-top: 90px;
@@ -69,10 +83,21 @@
     
 }
 
+.backTerminal {
+    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
+}
+
+.terminalClick {
+    position: absolute;
+    top: -42px;
+    left: 470px;
+
+}
+
 .insideTermial {
     display: flex;
     flex-direction: row;
-    margin-top: -200px;
+    margin-top: -150px;
     gap: 20px
 }
 
@@ -105,6 +130,42 @@
 .Back {
     position: absolute;
 
+}
+
+.copiedToast {
+position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--ivanna-purple);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-out forwards, slideOut 0.5s ease-in 1.5s forwards;
+  z-index: 1000;
+  font-weight: 500;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+    from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
 }
 
 .heroPFP {
