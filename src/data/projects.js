@@ -1,8 +1,8 @@
-import thumbnail from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/projects/Thumbnail.jpg";
-import starlingLabThumbnail from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/projects/StarlingLabThumbnail.png"
-import TicTacToeThumbnail from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/projects/TicTacToeThumbnail.png"
-import SnakeThumbnail from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/projects/SnakeThumbnail.png"
-import SquirrelThumbnail from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/projects/Squirrel++Thumbnail.png"
+import thumbnail from "../../assets/projects/Thumbnail.jpg";
+import starlingLabThumbnail from "../../assets/projects/StarlingLabThumbnail.png"
+import TicTacToeThumbnail from "../../assets/projects/TicTacToeThumbnail.png"
+import SnakeThumbnail from "../../assets/projects/SnakeThumbnail.png"
+import SquirrelThumbnail from "../../assets/projects/Squirrel++Thumbnail.png"
 
 export const projects = [
         {
