@@ -100,3 +100,9 @@ p {
     max-height: fit-content;
 }
 
+
+@media screen and (max-width: 830px) {
+    .card {
+        min-width: 400px;
+    }
+}

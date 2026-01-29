@@ -169,6 +169,21 @@
 
 
 @media screen and (max-width: 830px){
+
+    .title {
+        font-size: 30px;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    
+    .container p {
+    /* color: var(--charcoal-Black); */
+    font-family: "Abril Fatface";
+    font-size: 15px;
+    line-height: 25px; /* 145.833% */
+    letter-spacing: 0.72px;
+}
+
     .content {
         flex-direction: column;
     }
