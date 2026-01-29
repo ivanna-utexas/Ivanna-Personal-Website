@@ -2,14 +2,14 @@ import React from "react";
 import styles from "./Experience.module.css";
 import effects from "../../styles/effects.module.css";
 
-import AutoDriving from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/AutoDrivingLogo.svg";
-import Calendar from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/Calendar.svg";
-import Google from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/GoogleLogo.svg";
-import Location from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/Location.svg";
-import Research from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/experience/ResearchLogo.svg";
+import AutoDriving from "../../assets/experience/AutoDrivingLogo.svg";
+import Calendar from "../../assets/experience/Calendar.svg";
+import Google from "../../assets/experience/GoogleLogo.svg";
+import Location from "../../assets/experience/Location.svg";
+import Research from "../../assets/experience/ResearchLogo.svg";
 
 import { useState, useEffect } from "react";
-import experience from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/data/experience.json";
+import experience from "../../data/experience.json";
 
 export const Experience = () => {
   useEffect(() => {

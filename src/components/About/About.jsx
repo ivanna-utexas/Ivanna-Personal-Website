@@ -2,15 +2,15 @@ import React from "react";
 
 import styles from "./About.module.css";
 import effects from "../../styles/effects.module.css";
-import aboutPicture from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/aboutPicture.JPG";
-import backendIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/Backend.png";
-import bakingIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/baking.png";
-import frontendIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/FrontEnd.png";
-import musicIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/Music.png";
-import robotIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/Robot _D.png";
-import runIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/running.png";
-import UTLogo from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/UTLogo.png";
-import countries from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/about/countries.svg";
+import aboutPicture from "../../assets/about/aboutPicture.JPG";
+import backendIcon from "../../assets/about/Backend.png";
+import bakingIcon from "../../assets/about/baking.png";
+import frontendIcon from "../../assets/about/FrontEnd.png";
+import musicIcon from "../../assets/about/Music.png";
+import robotIcon from "../../assets/about/Robot _D.png";
+import runIcon from "../../assets/about/running.png";
+import UTLogo from "../../assets/about/UTLogo.png";
+import countries from "../../assets/about/countries.svg";
 import { useState, useEffect } from "react";
 
 export const About = () => {

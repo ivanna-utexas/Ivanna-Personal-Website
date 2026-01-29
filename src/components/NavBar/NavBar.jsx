@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./NavBar.module.css";
 
-import HanburgerMenu from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/nav/HamburgerMenu.png";
-import XMenu from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/nav/XMenu.png";
+import HanburgerMenu from "../../assets/nav/HamburgerMenu.png";
+import XMenu from "../../assets/nav/XMenu.png";
 
-import resume from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/public/Ivanna Aleman-Coronado Resume.pdf";
+import resume from "/public/Ivanna Aleman-Coronado Resume.pdf";
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

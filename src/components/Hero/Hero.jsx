@@ -2,16 +2,16 @@ import React from "react";
 import { useState, useEffect } from "react";
 import App from "../../App";
 
-import HeroPFP from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/hero/ProfilePic.png";
-import folderIcon from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/hero/FolderIcon.svg";
-import GitHubApp from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/hero/GitHubApp.svg";
-import LinkedInApp from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/hero/LinkedLnApp.svg";
-import EmailApp from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/hero/GmailApp.svg";
-import Back from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/hero/Terminal.svg";
-import Main from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/hero/WelcomeTerminal.svg";
+import HeroPFP from "../../assets/hero/ProfilePic.png";
+import folderIcon from "../../assets/hero/FolderIcon.svg";
+import GitHubApp from "../../assets/hero/GitHubApp.svg";
+import LinkedInApp from "../../assets/hero/LinkedLnApp.svg";
+import EmailApp from "../../assets/hero/GmailApp.svg";
+import Back from "../../assets/hero/Terminal.svg";
+import Main from "../../assets/hero/WelcomeTerminal.svg";
 import styles from "./Hero.module.css";
 import effects from "../../styles/effects.module.css";
-import terminalClick from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/hero/terminalClick.svg";
+import terminalClick from "../../assets/hero/terminalClick.svg";
 
 const TypingText = ({ text, speed = 50 }) => {
   const [displayText, setDisplayText] = useState("");

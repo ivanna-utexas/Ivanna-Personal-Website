@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./Contact.module.css";
 import { useState } from "react";
 
-import github from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/contact/GitHub.svg";
-import linkedln from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/contact/Linkedln.svg";
-import mail from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/assets/contact/Mail.svg";
+import github from "../../assets/contact/GitHub.svg";
+import linkedln from "../../assets/contact/Linkedln.svg";
+import mail from "../../assets/contact/Mail.svg";
 
 export const Contact = () => {
   const [showCopied, setShowCopied] = useState(false);

@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Projects.module.css";
 import effects from "../../styles/effects.module.css";
-import { projects } from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/data/projects.js";
+import { projects } from "../../data/projects.js";
 import ProjectCard from "./ProjectCard";
 import { useState, useEffect } from "react";
 
