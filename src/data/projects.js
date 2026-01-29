@@ -1,4 +1,3 @@
-import thumbnail from "../../assets/projects/Thumbnail.jpg";
 import starlingLabThumbnail from "../../assets/projects/StarlingLabThumbnail.png"
 import TicTacToeThumbnail from "../../assets/projects/TicTacToeThumbnail.png"
 import SnakeThumbnail from "../../assets/projects/SnakeThumbnail.png"
