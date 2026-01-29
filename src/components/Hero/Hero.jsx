@@ -4,7 +4,7 @@ import App from "../../App";
 
 import HeroPFP from "../../assets/hero/ProfilePic.png";
 import folderIcon from "../../assets/hero/FolderIcon.svg";
-import GitHubApp from "../../assets/hero/GitHubApp.svg";
+import GitHubApp from "../../assets/hero/GithubApp.svg";
 import LinkedInApp from "../../assets/hero/LinkedLnApp.svg";
 import EmailApp from "../../assets/hero/GmailApp.svg";
 import Back from "../../assets/hero/Terminal.svg";
@@ -118,7 +118,7 @@ export const Hero = () => {
                 />
                 <div className={styles.textStack}>
                   <p>Hi! I'm</p>
-                  <TypingText text="Ivanna Aleman-Coronado"/>
+                  <TypingText text="Ivanna Aleman-Coronado" />
                   <p>i’m a CS Student at the University of Texas at Austin!</p>
                 </div>
               </div>
