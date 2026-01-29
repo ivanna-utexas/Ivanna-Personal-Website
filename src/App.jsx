@@ -1,6 +1,5 @@
 import styles from "./App.module.css";
-import effects from "C:/Users/ivann/OneDrive/Desktop/Ivanna-Aleman-Coronado/Ivanna-Personal-Website/src/styles/effects.module.css";
-import { NavBar } from "./components/NavBar/NavBar";
+import effects from "./styles/effects.module.css";
 import { Hero } from "./components/Hero/Hero";
 import { About } from "./components/About/About";
 import { Experience } from "./components/Experience/Experience";
