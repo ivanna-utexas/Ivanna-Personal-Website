@@ -1,5 +1,41 @@
 @import "../../vars.css";
 
+.copiedToast {
+position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--ivanna-purple);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-out forwards, slideOut 0.5s ease-in 1.5s forwards;
+  z-index: 1000;
+  font-weight: 500;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+    from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
 .container {
     margin-top: 5%;
     margin-left: 3%;

@@ -5,7 +5,7 @@
 .card {
     background: var(--charcoal-Black);
     position: relative;
-    min-width: 550px;
+    min-width: 500px;
     background: var(--Charcoal-Black, #2B2B2B);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
 }
@@ -103,6 +103,7 @@ p {
 
 @media screen and (max-width: 830px) {
     .card {
-        min-width: 400px;
+        /* min-width: 400px; */
+        min-width: 0;
     }
 }

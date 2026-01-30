@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import App from "../../App";
 
 import HeroPFP from "../../assets/hero/ProfilePic.png";
+import HeroImage from "../../assets/hero/HeroImage.png";
+import terminals from "../../assets/hero/Terminals.svg";
 import folderIcon from "../../assets/hero/FolderIcon.svg";
 import GitHubApp from "../../assets/hero/GithubApp.svg";
 import LinkedInApp from "../../assets/hero/LinkedLnApp.svg";
@@ -104,36 +106,22 @@ export const Hero = () => {
         </div>
         <div className={`${styles.Terminals} ${effects.floating}`}>
           <div className={styles.terminalsInner}>
-            <div className={styles.MainTerminal}>
+            <img
+              src={terminals}
+              alt="Welcome Terminal"
+              className={styles.mainStyle}
+            />
+            <div className={styles.insideTermial}>
               <img
-                src={Main}
-                alt="Welcome Terminal"
-                className={styles.mainStyle}
+                src={HeroImage}
+                alt="Hero Profile"
+                className={styles.heroPFP}
               />
-              <div className={styles.insideTermial}>
-                <img
-                  src={HeroPFP}
-                  alt="Hero Profile"
-                  className={styles.heroPFP}
-                />
-                <div className={styles.textStack}>
-                  <p>Hi! I'm</p>
-                  <TypingText text="Ivanna Aleman-Coronado" />
-                  <p>i’m a CS Student at the University of Texas at Austin!</p>
-                </div>
+              <div className={styles.textStack}>
+                <p>Hi! I'm</p>
+                <TypingText text="Ivanna Aleman-Coronado" />
+                <p>i’m a CS Student at the University of Texas at Austin!</p>
               </div>
-            </div>
-            <div className={styles.backTerminal}>
-              <img
-                className={styles.backTerminal}
-                src={Back}
-                alt="Welcome Terminal"
-              />
-              <img
-                className={`${styles.terminalClick} ${styles.cursor}`}
-                src={terminalClick}
-                alt="|"
-              />
             </div>
           </div>
         </div>

@@ -3,6 +3,11 @@ import styles from "./ProjectCard.module.css";
 import effects from "../../styles/effects.module.css";
 import ProjectModel from "./ProjectModel";
 
+import starlingLabThumbnail from "../../assets/projects/StarlingLabThumbnail.png"
+import TicTacToeThumbnail from "../../assets/projects/TicTacToeThumbnail.png"
+import SnakeThumbnail from "../../assets/projects/SnakeThumbnail.png"
+import SquirrelThumbnail from "../../assets/projects/Squirrel++Thumbnail.png"
+
 export default function ProjectCard({ project }) {
   const [open, setOpen] = useState(false);
 

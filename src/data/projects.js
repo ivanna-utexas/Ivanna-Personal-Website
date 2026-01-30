@@ -1,7 +1,7 @@
-import starlingLabThumbnail from "../../assets/projects/StarlingLabThumbnail.png"
-import TicTacToeThumbnail from "../../assets/projects/TicTacToeThumbnail.png"
-import SnakeThumbnail from "../../assets/projects/SnakeThumbnail.png"
-import SquirrelThumbnail from "../../assets/projects/Squirrel++Thumbnail.png"
+import starlingLabThumbnail from "../assets/projects/StarlingLabThumbnail.png"
+import TicTacToeThumbnail from "../assets/projects/TicTacToeThumbnail.png"
+import SnakeThumbnail from "../assets/projects/SnakeThumbnail.png"
+import SquirrelThumbnail from "../assets/projects/Squirrel++Thumbnail.png"
 
 export const projects = [
         {
