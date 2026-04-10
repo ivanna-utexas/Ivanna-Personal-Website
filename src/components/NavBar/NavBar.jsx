@@ -4,7 +4,7 @@ import styles from "./NavBar.module.css";
 import HanburgerMenu from "../../assets/nav/HamburgerMenu.png";
 import XMenu from "../../assets/nav/XMenu.png";
 
-import resume from "/public/Ivanna Aleman-Coronado Resume.pdf";
+// import resume from "/public/Ivanna Aleman-Coronado Resume.pdf";
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -80,8 +80,8 @@ export const NavBar = () => {
     <nav className={styles.navbar}>
       <a
         className={styles.title}
-        href="/Ivanna Aleman-Coronado Resume.pdf"
-        download={resume}
+        href="/Ivanna-Aleman-Coronado-Resume.pdf"
+        download="Ivanna-Aleman-Coronado-Resume.pdf"
       >
         RESUME
       </a>

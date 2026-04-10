@@ -18,13 +18,15 @@ export default function ProjectModel({ project, onClose }) {
                 <img src={project.PreviewSRC} alt="Preview" />
               )}
               {project.PreviewType === "iFrame" && (
-                <iframe
-                  src={project.PreviewSRC}
-                  title={project.title}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                <div className={styles.iframeWrapper}>
+                    <iframe
+                        src={project.PreviewSRC}
+                        title={project.title}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                </div>
               )}
               {project.PreviewType === "video" && (
                 <video src={project.PreviewSRC} controls />

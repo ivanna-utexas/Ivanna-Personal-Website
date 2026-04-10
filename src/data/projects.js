@@ -2,9 +2,32 @@ import starlingLabThumbnail from "../assets/projects/StarlingLabThumbnail.png"
 import TicTacToeThumbnail from "../assets/projects/TicTacToeThumbnail.png"
 import SnakeThumbnail from "../assets/projects/SnakeThumbnail.png"
 import SquirrelThumbnail from "../assets/projects/Squirrel++Thumbnail.png"
+import BitBlastThumbnail from "../assets/projects/BitBlastThumbnail.svg"
 
 export const projects = [
-        {
+    {
+        "id": "bitblast",
+        "thumbnail": BitBlastThumbnail,
+        "title": "Bit Blast",
+        "Focus": "As computer architecture students, we wanted to take a dry but essential CS topic — boolean logic — and turn it into something genuinely fun. Inspired by falling-block puzzle games, the goal was to build a pick-up-and-play experience where players internalize XOR, AND, and NAND operations through gameplay rather than a textbook.",
+        "Background": "Bit Blast is a falling-block puzzle game built entirely in Unity 2D using C# in under 24 hours. An 8-bit register sits at the bottom of the screen while blocks of 1–4 bits fall from the top, each labeled with a gate operation. When a block lands, it applies its operation to the register bits it touches. A live truth table updates on the side panel so players always have a reference — until they don't need it anymore. A single GameManager.cs script owns all register state, gate logic, win detection, scoring, and level progression.",
+        "Description": "A falling-block puzzle game where bit-blocks drop onto an 8-bit register and perform logic gate operations on impact. Match the goal state to clear the register.",
+        "Bullets": [
+            "Built a fully playable Unity 2D game in C# in under 24 hours with no prior Unity shipping experience",
+            "Engineered gate-dependent win conditions: XOR and NAND target all 1s, AND targets all 0s, with scoring and detection branching per gate type",
+            "Implemented variable block widths (1–4 bits) with dynamic spawn, movement clamping, landing detection, and gate alignment from a single size value",
+            "Solved coordinate mapping between Unity's local canvas space and register array indices for pixel-accurate block landing",
+            "Used a lock delay coroutine to prevent double-trigger race conditions on block landing",
+            "Integrated a live truth table sidebar that teaches gate behavior passively through play"
+        ],
+        "Conclusion": "The moment a playtester started thinking two drops ahead to avoid flipping the wrong bits — that's when we knew the design worked. This project taught us that the best educational tools don't explain concepts, they make the wrong answer feel wrong. We're looking to expand Bit Blast with more number bases, two-player mode, and mobile support.",
+        "Language": "C#",
+        "Technology": ["Unity", "Canva"],
+        "PreviewType": "iFrame",
+        "PreviewSRC": "https://block-blast-but-i-need-to.study/",
+        "GitHub": "https://github.com/ivanna-utexas/BitBlast"
+    },
+    {
         "id": "squirrel++",
         "thumbnail": SquirrelThumbnail,
         "title": "Squirrel++",

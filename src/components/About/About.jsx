@@ -70,7 +70,7 @@ export const About = () => {
               />
               <h1>“What starts here changes the world!”</h1>
             </div>
-            <p>
+            <p className={styles.me}>
               I'm a computer science student at the University of Texas at
               Austin pursuing a B.S. in Computer Science with a minor in
               Robotics through the Robotics Honors Program. I'm passionate about
@@ -96,7 +96,7 @@ export const About = () => {
                 src={countries}
                 alt="Countries im from!"
               />
-              <p className={effects.wiggle}>
+              <p className={`${effects.wiggle} ${styles.me}`}>
                 Outside of computer science I play flute in the UT Symphony
                 Band, I am a member of the Latina Run Club, and I love baking!
               </p>

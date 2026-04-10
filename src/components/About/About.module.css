@@ -52,7 +52,15 @@
 }
 
 .container p {
-    color: var(--charcoal-Black);
+    color: var(rgb(255, 255, 255));
+    font-family: "Abril Fatface";
+    font-size: 24px;
+    line-height: 35px; /* 145.833% */
+    letter-spacing: 0.72px;
+}
+
+.me {
+    color: rgb(255, 255, 255);
     font-family: "Abril Fatface";
     font-size: 24px;
     line-height: 35px; /* 145.833% */
@@ -177,12 +185,13 @@
     }
     
     .container p {
-    /* color: var(--charcoal-Black); */
+    color: white;
     font-family: "Abril Fatface";
     font-size: 15px;
     line-height: 25px; /* 145.833% */
     letter-spacing: 0.72px;
 }
+
 
     .content {
         flex-direction: column;
